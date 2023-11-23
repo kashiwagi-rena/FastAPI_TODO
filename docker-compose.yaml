@@ -1,11 +1,12 @@
 version: '3'
 services:
-  digging_deeper_todo:
-    build: .
+  fastapi-app:
+    build:
+      context: .
     volumes:
-      - .dockervenv:/src/.venv
+      - ./.dockervenv:/src/.venv
       - .:/src
     ports:
-      - 8000:8000
+      - "8000:8000"
     environment:
       - WATCHFILES_FORCE_POLLING=true
