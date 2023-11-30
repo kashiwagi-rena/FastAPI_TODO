@@ -1,12 +1,15 @@
-# from jinja2 import Environment, FileSystemLoader
-# import json
+# from fastapi import FastAPI, Request
+# from fastapi.templating import Jinja2Templates
+# from fastapi.responses import HTMLResponse
 
-# env = Environment(loader=FileSystemLoader("./", encoding='utf8'))
-# tmpl = env.get_template('hello_word.j2')
+# app = FastAPI()
 
-# with open('hello_word.json') as hello:
-#     params = json.load(hello)
+# templates = Jinja2Templates(directory="templates")
 
-# hello_word_html = tmpl.render(params)
-# with open('hello_word.html', 'w') as f:
-#     f.write(hello_word_html)
+# @app.get("/hello", response_class=HTMLResponse)
+# def read_item(request: Request):
+#     # テンプレートに渡すデータ
+#     data = {'title': 'My Page', 'name': 'John'}
+    
+#     # テンプレートのレンダリング
+#     return templates.TemplateResponse("template.html", {"request": request, "data": data})
