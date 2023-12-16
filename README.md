@@ -15,6 +15,7 @@
 ## 実装予定の機能一覧
 ・Googleログイン機能
 ・TODOのCRUD処理
+・チェックマークをつけた際に取消線が入る
 ・取消線がついているものを消すための12時に自動的に動かせるバッチ処理
 ・取り消したTODOの一覧処理
 ・[自動デプロイ機能](https://docs.github.com/ja/actions/deployment/about-deployments/deploying-with-github-actions)
