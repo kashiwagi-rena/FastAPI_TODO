@@ -15,6 +15,9 @@ RUN pip install poetry
 # Alchemyのインストール
 RUN pip install sqlalchemy
 
+# alembicのインストール
+RUN pip install alembic
+
 
 # プロジェクトの依存関係をインストール
 COPY pyproject.toml* poetry.lock* ./
